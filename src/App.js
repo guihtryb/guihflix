@@ -1,10 +1,20 @@
-import React, { useEffect } from 'react';
-import moviesData from './service';
+import React from 'react';
+import AppProvider from './Context/AppProvider';
+import Footer from './Components/Footer';
+import Header from './Components/Header';
+import MainMovie from './Components/MainMovie';
+import MovieList from './Components/MovieList';
+
 
 export default function App() {
   return (
-    <div>
-      <h1>Netflix Clone</h1>
+    <AppProvider>
+    <div className="home-page">
+      <Header />
+      <MainMovie />
+      <MovieList />
+      <Footer />
     </div>
+    </AppProvider>
   );
 }
