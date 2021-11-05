@@ -53,10 +53,27 @@ const moviesData = {
       },
       {
         slug: 'animes',
-        title: 'Animes',
+        title: 'Animações',
         items: await basicFetchRequisition('discover/movie?with_genres=16&')
       },
     ];
+  },
+  getMovieInfo: async (movieId, type) => {
+    let info = {};
+
+    if (movieId) {
+      switch(type) {
+        case 'movie':
+          info = await basicFetchRequisition(`movie/${movieId}?`)
+        break;
+        case 'tv':
+          info = await basicFetchRequisition(`tv/${movieId}?`)
+        break;
+        default:
+        return null;
+      }
+    }
+    return info;
   }
 }
 
