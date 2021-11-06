@@ -10,7 +10,7 @@ export default function App() {
   return (
     <AppProvider>
     <div className="home-page">
-      <Header />
+      {/* <Header /> */}
       <MainMovie />
       <MovieList />
       <Footer />

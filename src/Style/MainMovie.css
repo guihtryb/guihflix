@@ -1,9 +1,84 @@
 .main-movie {
-  height: 100vh
+  height: 100vh;
 }
 
-.shadow {
+.vertical-shadow {
   width: inherit;
   height: inherit;
-  background: linear-gradient(to top, #111 10%, transparent 90%);
+  background: linear-gradient(to top, #111 5%, transparent 95%);
+}
+
+.horizontal-shadow {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 30px;
+  width: inherit;
+  height: inherit;
+  background: linear-gradient(to right, #111 20%, transparent 80%);
+}
+
+
+.main-movie-name {
+  font-size: 60px;
+  font-weight: 700;
+}
+
+.main-movie-infos {
+  display: flex;
+  font-size: 18px;
+  font-weight: 700;
+  margin: 15px 0;
+  width: 35vh;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.main-movie-points {
+  color:  #46d369; 
+}
+
+.main-movie-description {
+  font-size: 20px;
+  color: #999;
+  max-width: 50%;
+}
+
+.main-movie-buttons {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 45vh;
+  font-weight: 700;
+  justify-content: space-around;
+}
+
+.main-movie-buttons a {
+  padding: 12px 25px;
+  border-radius: 5px;
+  text-decoration: none;
+  opacity: 1;
+  transition: all ease 0.2s;
+}
+
+.main-movie-buttons a:hover {
+  opacity: 0.6;
+}
+
+
+
+.watch-button {
+  background-color: #FFF;
+  color: #000;
+}
+
+.my-list-button {
+  background-color: #333;
+  color: #FFF;
+}
+
+.main-movie-genres {
+  margin-top: 15px;
+  font-size: 18px;
+  color: #999;
 }
