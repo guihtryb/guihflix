@@ -7,8 +7,7 @@ export default function MainMovie() {
   
   const movieGenres = movieInfos.genres ? movieInfos.genres.map(({name}) => name) : null;
   const releaseDate = new Date(movieInfos.release_date);
-
-  return(
+  return (
     mainMovie &&
       <section className="main-movie" style={{
         backgroundSize: 'cover',
@@ -17,6 +16,7 @@ export default function MainMovie() {
       }}>
           <div className="vertical-shadow">
             <div className="horizontal-shadow">
+              <div className="main-movie-container">
               <span className="main-movie-name">{ movieInfos.title }</span>
               <div className="main-movie-infos">
                 <div className="main-movie-points">{ movieInfos.vote_average } pontos</div>
@@ -28,6 +28,7 @@ export default function MainMovie() {
                 <a href={`/list/add/${movieInfos.id}`} className="my-list-button" >+ Minha Lista</a>
               </div>
               <div className="main-movie-genres"><strong>Gêneros: { movieGenres ? `${movieGenres.join(', ')}` : null}</strong></div>
+              </div>
             </div>
           </div>
       </section>

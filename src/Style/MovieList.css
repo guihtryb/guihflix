@@ -6,12 +6,16 @@
 .movie-list {
   display: flex;
   flex-wrap: wrap;
-  margin: 20px 0px;
+  margin-top: -105px;
+  margin-bottom: 105px;
+  overflow: hidden;
 }
 
 .movie-cards-container {
   display: flex;
   padding: 4px 25px;
+  transition: all ease 0.8s;
+  overflow: hidden;
 }
 
 .movie-cover {
@@ -34,4 +38,41 @@
 
 .list-title {
   margin-left: 30px;
+}
+
+.arrow-left, .arrow-right {
+  display: flex;
+  position: absolute;
+  align-items: center;
+  width: 40px;
+  height: 300px;
+  padding: px;
+  z-index: 2;
+  cursor: pointer;
+  opacity: 0;
+  overflow: hidden;
+  transition: all ease 0.5s;
+}
+
+.arrow-left {
+  left: 0px;
+}
+
+.arrow-right {
+  right: 0px;
+}
+
+.movie-list:hover .arrow-left {
+  background: linear-gradient(to right, #171717, transparent);
+  opacity: 1;
+}
+
+.movie-cards-container:hover .arrow-right {
+  background: linear-gradient(to left, #171717, transparent);
+  opacity: 1;
+}
+
+
+.not-visible {
+  display: none;
 }
