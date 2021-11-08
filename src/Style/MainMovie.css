@@ -45,12 +45,13 @@
 
 .main-movie-points {
   color:  #46d369; 
+  padding: 3px;
 }
 
 .main-movie-description {
   font-size: 20px;
   color: #999;
-  max-width: 50%;
+  max-width: 55%;
 }
 
 .main-movie-buttons {
@@ -73,6 +74,13 @@
   opacity: 0.6;
 }
 
+.main-movie-year {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgb(63, 59, 59);
+  border-radius: 5px;
+  padding: 3px;
+}
+
 
 
 .watch-button {
@@ -89,15 +97,4 @@
   margin-top: 15px;
   font-size: 18px;
   color: #999;
-}
-
-@media screen and ( max-width : 1026px ) {
-  .main-movie-container {
-    flex-wrap: wrap;
-  }
-
-  .main-movie-description {
-    display: none;
-  }
-
 }

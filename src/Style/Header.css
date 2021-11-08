@@ -10,6 +10,10 @@
   transition: all ease 0.45s;
 }
 
+.header-container:hover { 
+  background-color: #181818;
+}
+
 .netflix-logo, .user-icon {
   border-radius: 4px;
   margin: 10px;

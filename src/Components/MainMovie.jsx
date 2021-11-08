@@ -7,6 +7,13 @@ export default function MainMovie() {
   
   const movieGenres = movieInfos.genres ? movieInfos.genres.map(({name}) => name) : null;
   const releaseDate = new Date(movieInfos.release_date);
+  let description = movieInfos.overview;
+  
+  if (movieInfos.overview) {
+    description = description.length > 225 ? description.substring(0, 225) + '...' : movieInfos.overview;
+  }
+
+  
   return (
     mainMovie &&
       <section className="main-movie" style={{
@@ -22,7 +29,7 @@ export default function MainMovie() {
                 <div className="main-movie-points">{ movieInfos.vote_average } pontos</div>
                 <div className="main-movie-year">{releaseDate.getFullYear()}</div>
               </div>
-              <div className="main-movie-description">{ movieInfos.overview }</div>
+              <div className="main-movie-description">{ description }</div>
               <div className="main-movie-buttons">
                 <a href={`/watch/${movieInfos.id}`} className="watch-button">► Assistir</a>
                 <a href={`/list/add/${movieInfos.id}`} className="my-list-button" >+ Minha Lista</a>
