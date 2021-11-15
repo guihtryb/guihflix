@@ -57,7 +57,7 @@
 .main-movie-buttons {
   margin-top: 15px;
   display: flex;
-  width: 50vh;
+  max-width: 50vh;
   font-weight: 700;
   justify-content: space-around;
 }

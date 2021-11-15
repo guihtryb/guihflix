@@ -38,9 +38,8 @@ export default function MovieList() {
   };
 
   const handleRightClick = (list) => {
-    let scroll = scrollX[list] - Math.round(window.innerWidth);
+    let scroll = scrollX[list] - Math.round(window.innerWidth + 5);
     let listTotalWidth = movies[0].items.results.length * 184;
-    console.log(scroll, listTotalWidth);
     if (Math.abs(scroll) >= listTotalWidth + 50) scroll = scrollX[list];
 
     setScrollX(
@@ -50,8 +49,11 @@ export default function MovieList() {
     );
   };
 
-  if (!movies.length) return <img className="loading" src={Loading} alt="Loading"/>;
-
+  if (!movies.length) return (
+  <div className="is-loading">
+    <img className="loading" src={Loading} alt="Loading"/>;
+  </div>
+  );
 
   return (
     <section className="movie-list-container">
