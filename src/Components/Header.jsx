@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <header className="header-container" style={ scrolled ? scrolledStyle  : notScrolledStyle }>
-      <img src={ Logo } alt="Netflix Logo"  className="netflix-logo"/>
+      <a href="#main-movieid" ><img src={ Logo } alt="Netflix Logo"  className="netflix-logo"/></a>
       <img src={ UserIcon } alt="User Icon" className="user-icon" />
     </header>
   );

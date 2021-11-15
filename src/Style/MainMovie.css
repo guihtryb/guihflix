@@ -98,3 +98,21 @@
   font-size: 18px;
   color: #999;
 }
+
+
+@media screen and (max-width : 960px) {
+
+  .main-movie-name {
+    font-size: 39px;
+  }
+
+  .main-movie-infos {
+    width: 30vh;
+    flex-wrap: nowrap;
+  }
+
+  .main-movie-description {
+    font-size: 19px;
+    max-width: 65%;
+  }
+}

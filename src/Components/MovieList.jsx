@@ -21,27 +21,33 @@ export default function MovieList() {
 
 
   const handleLeftClick = (list) => {
-    scrollX[list] !== 0 ? setScrollX(
+    const scroll = scrollX[list] + Math.round(window.innerWidth);
+    scrollX[list] >= 0 ? setScrollX(
       {
         ...scrollX,
-        [list]:  scrollX[list]  + 200
+        [list]: 0,
       },
-    ) : setScrollX(
+    ) 
+    :
+    setScrollX(
       {
         ...scrollX,
-        [list]: scrollX[list]
-      });
+        [list]: scroll,
+      }
+    );
   };
 
   const handleRightClick = (list) => {
-    scrollX[list] !== -400 ? setScrollX(
-      { ...scrollX,
-        [list]: scrollX[list] - 200
-      }
-      ) : setScrollX(
+    let scroll = scrollX[list] - Math.round(window.innerWidth);
+    let listTotalWidth = movies[0].items.results.length * 184;
+    console.log(scroll, listTotalWidth);
+    if (Math.abs(scroll) >= listTotalWidth + 50) scroll = scrollX[list];
+
+    setScrollX(
         { ...scrollX,
-          [list]: scrollX[list]
-        });
+          [list]: scroll,
+        }
+    );
   };
 
   if (!movies.length) return <img className="loading" src={Loading} alt="Loading"/>;
@@ -52,7 +58,7 @@ export default function MovieList() {
       { movies.map(({ title, items }, listKey) => (
         <div className="movie-list" key={ listKey } >
           <h3 className="list-title"> { title } </h3>
-          <div style={{ marginLeft: `${scrollX[title]}vh` }} className="movie-cards-container">
+          <div style={{ marginLeft: `${scrollX[title]}px` }} className="movie-cards-container">
             <div className="arrow-left" onClick={ () => handleLeftClick(title) }>
               <ArrowBackIosIcon style={{fontSize: 50}} om />
             </div>

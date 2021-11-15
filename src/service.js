@@ -58,6 +58,7 @@ const moviesData = {
       },
     ];
   },
+
   getMovieInfo: async (movieId, type) => {
     let info = {};
 

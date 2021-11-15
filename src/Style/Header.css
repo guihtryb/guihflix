@@ -27,3 +27,5 @@
 .netflix-logo {
   height: 90px;
 }
+
+@media screen and (max-width : 960px) {}

@@ -30,6 +30,7 @@
 
 .movie-cover {
   transform: scale(0.92);
+  width: 200px;
   border-radius: 5px;
   transition: all ease 0.2s;
 }

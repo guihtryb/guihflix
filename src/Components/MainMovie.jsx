@@ -10,13 +10,13 @@ export default function MainMovie() {
   let description = movieInfos.overview;
   
   if (movieInfos.overview) {
-    description = description.length > 225 ? description.substring(0, 225) + '...' : movieInfos.overview;
+    description = description.length > 200 ? description.substring(0, 225) + '...' : movieInfos.overview;
   }
 
   
   return (
     mainMovie &&
-      <section className="main-movie" style={{
+      <section className="main-movie" id="main-movieid" style={{
         backgroundSize: 'cover',
         backgroundPosition: 'center',
         backgroundImage: `url(https://image.tmdb.org/t/p/original${movieInfos.backdrop_path})`,
