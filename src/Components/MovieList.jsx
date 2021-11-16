@@ -21,7 +21,7 @@ export default function MovieList() {
 
 
   const handleLeftClick = (list) => {
-    const scroll = scrollX[list] + Math.round(window.innerWidth);
+    const scroll = scrollX[list] + Math.round(window.innerWidth + 5);
     scrollX[list] >= 0 ? setScrollX(
       {
         ...scrollX,
