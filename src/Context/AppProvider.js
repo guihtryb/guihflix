@@ -14,14 +14,14 @@ export default function AppProvider({ children }) {
     const randomChoose = Math.floor(Math.random() * (topRated[0].items.results.length));
     const chosen = topRated[0].items.results[randomChoose];
     const chosenInfo = await moviesData.getMovieInfo(chosen.id, 'movie');
-    // setMainMovie(chosen);
-    // setMovieInfos(chosenInfo);
+    setMainMovie(chosen);
+    setMovieInfos(chosenInfo);
   }
 
   useEffect(() => {
     const loadMovies = async () => {
       const list = await moviesData.getHomeList();
-      // setMovies(list);
+      setMovies(list);
       getRandomMainMovie(list);
     }
     loadMovies();

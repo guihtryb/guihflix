@@ -103,7 +103,7 @@
 @media screen and (max-width : 960px) {
 
   .main-movie-name {
-    font-size: 39px;
+    font-size: calc(90% + 5.5vmin);
   }
 
   .main-movie-infos {
@@ -113,6 +113,6 @@
 
   .main-movie-description {
     font-size: 19px;
-    max-width: 65%;
+    max-width: 75%;
   }
 }

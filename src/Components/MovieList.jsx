@@ -62,7 +62,7 @@ export default function MovieList() {
           <h3 className="list-title"> { title } </h3>
           <div style={{ marginLeft: `${scrollX[title]}px` }} className="movie-cards-container">
             <div className="arrow-left" onClick={ () => handleLeftClick(title) }>
-              <ArrowBackIosIcon style={{fontSize: 50}} om />
+              <ArrowBackIosIcon style={{fontSize: 50}} />
             </div>
             <div className="arrow-right" onClick={ () => handleRightClick(title) }>
             <ArrowForwardIosIcon style={{fontSize: 50}}/>
