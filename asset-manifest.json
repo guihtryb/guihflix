@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/guihflix/static/css/main.7debdfd5.chunk.css",
-    "main.js": "/guihflix/static/js/main.394c375e.chunk.js",
-    "main.js.map": "/guihflix/static/js/main.394c375e.chunk.js.map",
+    "main.css": "/guihflix/static/css/main.65460af4.chunk.css",
+    "main.js": "/guihflix/static/js/main.b147c1b5.chunk.js",
+    "main.js.map": "/guihflix/static/js/main.b147c1b5.chunk.js.map",
     "runtime-main.js": "/guihflix/static/js/runtime-main.649db9a9.js",
     "runtime-main.js.map": "/guihflix/static/js/runtime-main.649db9a9.js.map",
     "static/js/2.7e28b413.chunk.js": "/guihflix/static/js/2.7e28b413.chunk.js",
     "static/js/2.7e28b413.chunk.js.map": "/guihflix/static/js/2.7e28b413.chunk.js.map",
     "index.html": "/guihflix/index.html",
-    "static/css/main.7debdfd5.chunk.css.map": "/guihflix/static/css/main.7debdfd5.chunk.css.map",
+    "static/css/main.65460af4.chunk.css.map": "/guihflix/static/css/main.65460af4.chunk.css.map",
     "static/js/2.7e28b413.chunk.js.LICENSE.txt": "/guihflix/static/js/2.7e28b413.chunk.js.LICENSE.txt",
     "static/media/LoadinTime.cc57505c.gif": "/guihflix/static/media/LoadinTime.cc57505c.gif",
     "static/media/LogoWithoutBg.afa23447.png": "/guihflix/static/media/LogoWithoutBg.afa23447.png",
@@ -17,7 +17,7 @@
   "entrypoints": [
     "static/js/runtime-main.649db9a9.js",
     "static/js/2.7e28b413.chunk.js",
-    "static/css/main.7debdfd5.chunk.css",
-    "static/js/main.394c375e.chunk.js"
+    "static/css/main.65460af4.chunk.css",
+    "static/js/main.b147c1b5.chunk.js"
   ]
 }
